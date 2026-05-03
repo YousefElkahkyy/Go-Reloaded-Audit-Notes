@@ -59,7 +59,7 @@ func processModifiers(words []string) []string {
 		"(cap)": capitalize,
 		"(hex)": func(s string) string {
 			if v, err := strconv.ParseInt(s, 16, 64); err == nil {
-				return strconv.	(v, 10)
+				return strconv.FormatInt(v, 10)
 			}
 			return s
 		},
