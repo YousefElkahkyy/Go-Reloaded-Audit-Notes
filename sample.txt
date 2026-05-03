@@ -1,0 +1,40 @@
+1. Numbers: 1E (hex) and 10 (bin) should be 30 and 2.
+
+2. Case: hello (up) world (low) brooklyn (cap) .
+
+3. Numbered: this is so exciting (up, 2) and the age of wisdom (cap, 4).
+
+4. Punctuation: Hello ,world !How are you ? ... or !?
+
+5. Quotes: ' awesome ' and ' I am happy ' and 'hello'.
+
+6. Articles: a apple , A hour , a banana , a orange.
+
+7. Mixed: 7F (hex) is a (up) big number (low, 2) !
+
+8. Edge: (up) (hex) a (bin, 1) apple.
+
+9. Spacing: This (cap)     is     a     test     (up, 2) 
+
+Hello , world (up) ! !? (hex) ...
+(up, 2) this should not crash
+a 'hour (low) , a 'apple
+10 (hex) (up) (cap)
+10 10 10 (bin, 3)
+This is "' a test '" (up)
+"say ' hello ' to"
+Is this true ... !? (up, 2)
+Line one
+
+Line two
+iPHONE (cap)
+word (up, 999)
+A ... orange
+G0 (hex) 22 (bin)
+'first' 'second' 'third'
+working (up), (low)
+It is a
+(up) (bin, 1)
+1st (cap)
+word      (up)        ,      word
+it was 10 (bin) ' a apple ' (cap, 2) !?
