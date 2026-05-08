@@ -1,0 +1,40 @@
+1. Numbers: 30 and 2 should be 30 and 2.
+
+2. Case: HELLO world Brooklyn.
+
+3. Numbered: this is SO EXCITING and The Age Of Wisdom
+
+4. Punctuation: Hello, world! How are you?... or!?
+
+5. Quotes: 'awesome' and 'I am happy' and 'hello'.
+
+6. Articles: an apple, An hour, a banana, an orange.
+
+7. Mixed: 127 is A big number!
+
+8. EDGE: an apple.
+
+9. Spacing: This is A TEST
+
+Hello, WORLD!!?...
+this should not crash
+an 'hour, an 'apple
+16
+2 2 2
+This is "' a test '"
+"say 'hello' to"
+Is this true...!?
+Line one
+
+Line two
+IPHONE
+WORD
+A... orange
+G0 22
+'first' 'second' 'third'
+working,
+It is a
+
+1st
+WORD, word
+it was 2 'an Apple'!?
