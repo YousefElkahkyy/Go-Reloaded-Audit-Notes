@@ -30,6 +30,12 @@ func TestProcess(t *testing.T) {
 			input:    "harold wilson (cap, 2) : ' I am a optimist ,but a optimist an fish who carries a raincoat . '",
 			expected: "Harold Wilson: 'I am an optimist, but an optimist a fish who carries a raincoat.'",
 		},
+		{
+			name:     "test Case5",
+			input:    "it was 10 (bin) ' a apple ' (cap, 2) !?",
+			expected: "it was 2 'An Apple'!?",
+
+		},
 	}
 
 	for _, tt := range tests {
