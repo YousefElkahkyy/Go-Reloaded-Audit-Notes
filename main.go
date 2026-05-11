@@ -5,6 +5,7 @@ import (
 	"os"
 	"strconv"
 	"strings"
+	"unicode"
 )
 
 func main() {
@@ -75,7 +76,7 @@ var transforms = map[string]func(string) string{
 
 func isWordToken(s string) bool {
 	for _, r := range s {
-		if strings.ContainsRune("abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789", r) {
+		if unicode.IsLetter(r) || unicode.IsDigit(r) {
 			return true
 		}
 	}
@@ -126,7 +127,7 @@ func fixPunctuation(words []string) []string {
 			}
 		case strings.ContainsRune(".,!?:;", rune(w[0])) && len(w) > 1:
 			end := strings.IndexFunc(w, func(r rune) bool {
-				return !strings.ContainsRune(".,!?:;", r)
+				return !unicode.IsPunct(r)
 			})
 			if len(result) > 0 {
 				result[len(result)-1] += w[:end]
@@ -168,14 +169,16 @@ func fixQuotes(words []string) []string {
 
 // ── articles ──────────────────────────────────────────────────────────────────
 
-const vowelSounds = "aeiouAEIOUhH"
+var vowels = map[rune]bool{
+	'a': true, 'e': true, 'i': true, 'o': true, 'u': true, 'h': true,
+}
 
 func isVowelSound(word string) bool {
 	clean := strings.TrimLeft(word, "'\".,!?:;")
 	if clean == "" {
 		return false
 	}
-	return strings.ContainsRune(vowelSounds, rune(clean[0]))
+	return vowels[unicode.ToLower(rune(clean[0]))]
 }
 
 func fixArticles(words []string) []string {
@@ -188,7 +191,7 @@ func fixArticles(words []string) []string {
 			continue
 		}
 
-		isUpper := bare[:1] == strings.ToUpper(bare[:1])
+		isUpper := unicode.IsUpper(rune(bare[0]))
 
 		switch {
 		case isVowelSound(words[i+1]) && isUpper:
